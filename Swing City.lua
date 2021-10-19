@@ -75,5 +75,6 @@ end
     spawn(function()
       game.Lighting.Atmosphere:Destroy()
       game.Lighting.DepthOfField:Destroy()
+      game.Lighting.ColorCorrection:Destroy()
     end)
   end
