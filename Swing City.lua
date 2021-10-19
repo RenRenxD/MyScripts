@@ -30,6 +30,11 @@ b:Toggle("Money Farm",function(money)
     end
 end)
 
+b:Button("Server Raper",function()
+  print("Server Raper")
+  LagServer()
+end)
+
 b:Button("Remove Fog",function()
   print("Fog Raper")
   RemoveFog()
@@ -78,5 +83,24 @@ end
       game.Lighting.ColorCorrection:Destroy()
       game.Lighting.SunRays:Destroy()
       game.Lighting.Bloom:Destroy()
+    end)
+  end
+
+  function LagServer()
+    spawn(function()
+      for _, HRP in pairs(workspace:GetDescendants()) do
+        if HRP:IsA("Part") then
+            print("Part")
+          
+      local args = {
+          [1] = "create",
+          [2] = HRP.Position,
+          [3] = HRP.Position 
+      }
+      
+      game:GetService("ReplicatedStorage").SwingEvent:FireServer(unpack(args))
+      
+      end
+      end
     end)
   end
