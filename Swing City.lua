@@ -10,9 +10,9 @@ _G.ButtonColor = Color3.fromRGB(255,105,180)
 
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
 
-local w = library:CreateWindow("Swing City") -- Creates the window
+local w = library:CreateWindow("Swing City")
 
-local b = w:CreateFolder("made by ren.#7720") -- Creates the folder(U will put here your buttons,etc)
+local b = w:CreateFolder("made by ren.#7720")
 
 b:Toggle("Web Raper",function(bool)
   getgenv().AutoWeb = bool
@@ -76,5 +76,7 @@ end
       game.Lighting.Atmosphere:Destroy()
       game.Lighting.DepthOfField:Destroy()
       game.Lighting.ColorCorrection:Destroy()
+      game.Lighting.SunRays:Destroy()
+      game.Lighting.Bloom:Destroy()
     end)
   end
