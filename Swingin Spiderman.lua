@@ -13,7 +13,6 @@ local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Aika
 local w = library:CreateWindow("Swingin Spiderman")
 
 local b = w:CreateFolder("made by ren !#1327")
-b:DestroyGui()
 
 b:Toggle(
     "Web sex",
@@ -45,3 +44,5 @@ function fuckupyourselfpart2()
         end
     )
 end
+
+b:DestroyGui()
