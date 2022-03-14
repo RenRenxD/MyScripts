@@ -1,5 +1,6 @@
 getgenv().AutoWeb = false
 getgenv().MoneyFarm = false
+
 _G.MainColor = Color3.fromRGB(255,105,180)
 _G.ToggleColor = Color3.fromRGB(255,105,180)
 _G.ArrowColor = Color3.fromRGB(252,251,250)
@@ -12,7 +13,7 @@ local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Aika
 
 local w = library:CreateWindow("Swing City")
 
-local b = w:CreateFolder("made by ren.#7720")
+local b = w:CreateFolder("shit made by ren !#1327")
 
 b:Toggle("Web Raper",function(bool)
   getgenv().AutoWeb = bool
