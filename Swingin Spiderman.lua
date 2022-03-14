@@ -14,20 +14,16 @@ local w = library:CreateWindow("Swingin Spiderman")
 
 local b = w:CreateFolder("made by ren !#1327")
 
-b:Toggle(
-    "Web sex",
-    function(bool)
+b:Toggle("Web sex", function(bool)
         getgenv().fuckupyourself = bool
         print("Sexing the webs")
         if bool then
             fuckupyourselfpart2()
         end
-    end
-)
+    end)
 
 function fuckupyourselfpart2()
-    spawn(
-        function()
+    spawn(function()
             while fuckupyourself and wait() do
                 for _, Player in pairs(game.Players:GetPlayers()) do
                     local args = {
@@ -36,13 +32,19 @@ function fuckupyourselfpart2()
                         [3] = Player.Character.HumanoidRootPart.Position
                     }
 
-                    game:GetService("Players").LocalPlayer.Character:FindFirstChild("WebShooter lvl5").WebRemoteEvent:FireServer(
-                        unpack(args)
-                    )
-                end
+                    game:GetService("Players").LocalPlayer.Character:FindFirstChild("WebShooter lvl5").WebRemoteEvent:FireServer(unpack(args))
+                    
+                    local args2 = {
+                        [1] = "FlyWebLeftHand",
+                        [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("WebShooter lvl5").Web2SlingLocalScript,
+                        [3] = Player.Character.HumanoidRootPart.Position
+                    }
+
+                    game:GetService("Players").LocalPlayer.Character:FindFirstChild("WebShooter lvl5").WebRemoteEvent:FireServer(unpack(args2))
+ 
             end
         end
-    )
+    end)
 end
 
 b:DestroyGui()
